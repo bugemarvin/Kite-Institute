@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: none;
+  margin: none;
+
+}
+
+.container_hero {
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.container_hero_bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/img/bg/bg.png");
+  background-attachment: center;
+  background-position: top;
+}
