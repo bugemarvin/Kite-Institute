@@ -1,3 +1,4 @@
+import React from 'react';
 import style from './nav.module.css';
 import Link from 'next/link';
 import {
@@ -9,36 +10,14 @@ import {
 } from '@nextui-org/react';
 import { useRouter } from 'next/router';
 
+type Item = {
+  key: string;
+  label: string;
+  href: string;
+};
+
 export default function NavigationPage() {
-  const router = useRouter();
-  const { pathname } = router;
-  const items: Item[] = [
-    {
-      key: 'index',
-      label: 'Home',
-      href: '/'
-    },
-    {
-      key: 'us',
-      label: 'About',
-      href: '/about'
-    },
-    {
-      key: 'studies',
-      label: 'Courses',
-      href: '/courses'
-    },
-    {
-      key: 'map',
-      label: 'Location',
-      href: '/location'
-    },
-    {
-      key: 'info',
-      label: 'Contact Us',
-      href: '/contact'
-    }
-  ];
+  const { pathname } = useRouter();
   return (
     <>
       <div className={style.navigation}>
@@ -63,12 +42,22 @@ export default function NavigationPage() {
           <DropdownTrigger>
             <Button variant='bordered' className={style.btn}>Menu</Button>
           </DropdownTrigger>
-          <DropdownMenu aria-label='Dynamic Actions' items={items} className={style.list}>
-            {(item: Item) => (
-              <DropdownItem key={item.key}>
-                <Link href={item.href} className={pathname === item.href ? style.active : style.notActive}>{item.label}</Link>
+          <DropdownMenu aria-label='Dynamic Actions' className={style.list}>
+              <DropdownItem>
+                  <Link href='/' className={pathname === '/' ? style.active : style.notActive}>Home</Link>
               </DropdownItem>
-            )}
+              <DropdownItem>
+                  <Link href='/about' className={pathname === '/about' ? style.active : style.notActive}>About</Link>
+              </DropdownItem>
+              <DropdownItem>
+                  <Link href='/courses' className={pathname === '/courses' ? style.active : style.notActive}>Courses</Link>
+              </DropdownItem>
+              <DropdownItem>
+                  <Link href='/location' className={pathname === '/location' ? style.active : style.notActive}>Location</Link>
+              </DropdownItem>
+              <DropdownItem>
+                  <Link href='/contact' className={pathname === '/contact' ? style.active : style.notActive}>Contact Us</Link>
+              </DropdownItem>
           </DropdownMenu>
         </Dropdown>
         <div className={style.navigation__button}>

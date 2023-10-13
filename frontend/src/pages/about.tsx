@@ -1,4 +1,4 @@
-import NavigationPage from "./components/header/header";
+import NavigationPage from './components/header/NavigationPage';
 import HeroSection from "./components/About/hero";
 
 export default function AboutPage() {
