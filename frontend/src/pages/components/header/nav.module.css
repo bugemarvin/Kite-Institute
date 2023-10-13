@@ -2,7 +2,7 @@
 .navigation {
         width: 100%;
         height: 10vh;
-        padding: 0 3rem;
+        padding: 3rem;
         z-index: 100;
         position: absolute;
         top: 0;
@@ -34,8 +34,8 @@
 
 .navigation__link,
 .navigation__buttons {
-        font-size: 1.3rem;
-        font-weight: 600;
+        font-size: 1.5rem;
+        font-weight: 750;
         color: #fff !important;
         text-decoration: none;
         cursor: pointer;
@@ -48,6 +48,13 @@
   padding: 0.8rem;
   border-radius: 1rem;
   text-transform: uppercase;
+}
+
+.active {
+        color: #030303 !important;
+}
+.notActive {
+        color: #fff !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -82,7 +89,9 @@
 }
 
 @media screen and (min-width: 768px) {
-        .btn {
+        .btn,
+        .list {
                 display: none;
+                content: "";
         }
 }

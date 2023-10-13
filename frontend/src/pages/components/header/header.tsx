@@ -7,8 +7,11 @@ import {
   Button,
   DropdownItem
 } from '@nextui-org/react';
+import { useRouter } from 'next/router';
 
 export default function NavigationPage() {
+  const router = useRouter();
+  const { pathname } = router;
   const items: Item[] = [
     {
       key: 'index',
@@ -40,19 +43,19 @@ export default function NavigationPage() {
     <>
       <div className={style.navigation}>
         <div className={style.navigation__links}>
-          <Link className={style.navigation__link} href='/'>
+          <Link className={`${style.navigation__link} ${pathname === '/' ? style.active : style.notActive}`} href='/'>
             Home
           </Link>
-          <Link className={style.navigation__link} href='/about'>
+          <Link className={`${style.navigation__link} ${pathname === '/about' ? style.active : style.notActive}`} href='/about'>
             About
           </Link>
-          <Link className={style.navigation__link} href='/courses'>
+          <Link className={`${style.navigation__link} ${pathname === '/courses' ? style.active : style.notActive}`} href='/courses'>
             Courses
           </Link>
-          <Link className={style.navigation__link} href='/location'>
+          <Link className={`${style.navigation__link} ${pathname === '/location' ? style.active : style.notActive}`} href='/location'>
             Location
           </Link>
-          <Link className={style.navigation__link} href='/contact'>
+          <Link className={`${style.navigation__link} ${pathname === '/contact' ? style.active : style.notActive}`} href='/contact'>
             Contact
           </Link>
         </div>
@@ -60,10 +63,10 @@ export default function NavigationPage() {
           <DropdownTrigger>
             <Button variant='bordered' className={style.btn}>Menu</Button>
           </DropdownTrigger>
-          <DropdownMenu aria-label='Dynamic Actions' items={items}>
+          <DropdownMenu aria-label='Dynamic Actions' items={items} className={style.list}>
             {(item: Item) => (
               <DropdownItem key={item.key}>
-                <Link href={item.href}>{item.label}</Link>
+                <Link href={item.href} className={pathname === item.href ? style.active : style.notActive}>{item.label}</Link>
               </DropdownItem>
             )}
           </DropdownMenu>
