@@ -11,8 +11,8 @@
 }
 
 .navigation,
-.style.navigation__links,
-.style.navigation__button {
+.navigation__links,
+.navigation__button {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -28,14 +28,14 @@
         border-radius: 1rem;
 }
 
-.navigation__buttons:not(:last-child){
-        margin: 0 3rem;
+.navigation__button {
+        gap: 3rem;
 }
 
 .navigation__link,
 .navigation__buttons {
         font-size: 1.5rem;
-        font-weight: 750;
+        font-weight: 600;
         color: #fff !important;
         text-decoration: none;
         cursor: pointer;

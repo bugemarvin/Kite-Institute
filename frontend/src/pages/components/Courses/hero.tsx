@@ -5,6 +5,7 @@ export default function HeroSection() {
     <div className={styles.container}>
         <div className={styles.container_hero}>
                 <span className={styles.container_hero_bg}></span>
+                <span className={styles.container_hero_contact}>Courses</span>
         </div>
     </div>
   );

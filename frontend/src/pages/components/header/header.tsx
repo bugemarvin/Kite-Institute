@@ -56,7 +56,7 @@ export default function NavigationPage() {
             Location
           </Link>
           <Link className={`${style.navigation__link} ${pathname === '/contact' ? style.active : style.notActive}`} href='/contact'>
-            Contact
+            Contact Us
           </Link>
         </div>
         <Dropdown>
