@@ -1,11 +1,11 @@
 import NavigationPage from './components/header/NavigationPage';
-import HeroSection from "./components/Landing/hero";
+import HeroSection from './components/Landing/hero';
 
-export default function Page() {
+export default function Page () {
   return (
-        <>
-          <NavigationPage />
-          <HeroSection />
-        </>
+    <>
+      <NavigationPage />
+      <HeroSection />
+    </>
   );
 }
