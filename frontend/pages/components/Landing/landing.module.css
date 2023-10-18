@@ -9,7 +9,6 @@
 }
 
 .container_hero {
-  background-color: #000;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -32,6 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 8rem 0 3rem 0;
 }
 
 .container_hero_content_lasttitle {
@@ -73,6 +73,12 @@
   border: 1px solid #030303;
 }
 
+@media screen and (max-width: 1800px) {
+  .container_hero {
+    height: 100%;
+  }
+}
+
 @media screen and (max-width: 968px) {
   .container_hero_content_title {
     font-size: 3.6rem;
@@ -110,4 +116,103 @@
   .container_hero_content_lasttitle {
     font-size: 1.2rem;
   }
+}
+
+/* Sections container */
+
+.container_sections {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 6rem 4rem;
+  text-align: center;
+  gap: 3rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.container_sections_title {
+  font-size: 4.4rem;
+  font-weight: 600;
+  color: #f86408;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 400px) {
+  .container_sections {
+    font-size: 1.2rem;
+  }
+  .container_sections_title {
+    font-size: 2.4rem;
+  }
+  .container_sections_cards {
+    gap: 0.5rem;
+  }
+  .container_sections_text {
+    width: 100%;
+    line-height: 1rem;
+  }
+}
+
+.container_sections_map {
+  height: 100%;
+  width: 80%;
+}
+
+.container_sections_text {
+  width: 78%;
+  line-height: 3rem;
+}
+
+/* Cards */
+.container_sections_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.container_sections_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background-color: #f8e1d4;
+  border-radius: 1rem;
+}
+
+.container_sections_card:hover {
+  border: 0.1rem solid #f86408;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container_sections_cards_header {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #f86408;
+  text-transform: capitalize;
+  width: 100%;
+  text-align: center;
+}
+
+.container_sections_cards_text {
+  width: 60%;
+  text-align: center;
+}
+
+.container_sections_button {
+  color: #fff !important;
+  background-color: #030303;
+  padding: 1rem 2.2rem;
+  border-radius: 1rem;
+}
+
+.container_sections_button:hover {
+  background-color: #f86408;
+  transition: all 0.3s ease-in-out;
+  color: #000 !important;
 }

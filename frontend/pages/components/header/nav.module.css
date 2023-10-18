@@ -3,14 +3,29 @@
         width: 100%;
         height: 10vh;
         padding: 3rem;
-        z-index: 100;
-        position: absolute;
+        z-index: 10000;
+        position: fixed;
         top: 0;
         left: 0;
         right: 0;
 }
 
+.navigation__active {
+        width: 100%;
+        height: 10vh;
+        padding: 3rem;
+        z-index: 10000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #f86408;;
+        color: #000;
+        box-shadow: 0 0 30px rgba(13, 13, 13, 0.62);
+}
+
 .navigation,
+.navigation__active,
 .navigation__links,
 .navigation__button {
         display: flex;
@@ -51,10 +66,10 @@
 }
 
 .active {
-        color: #030303 !important;
+        color: #b13333 !important;
 }
 .notActive {
-        color: #fff !important;
+        color: #000000 !important;
 }
 
 @media screen and (max-width: 768px) {

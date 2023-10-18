@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './nav.module.css';
 import Link from 'next/link';
 import {
@@ -10,17 +10,23 @@ import {
 } from '@nextui-org/react';
 import { useRouter } from 'next/router';
 
-type Item = {
-  key: string;
-  label: string;
-  href: string;
-};
 
 export default function NavigationPage() {
   const { pathname } = useRouter();
+  const [coloractive, setColorActive] = useState(false);
+  const changeNavBar = () => {
+    if (window.scrollY >= 80) {
+      setColorActive(true);
+    } else {
+      setColorActive(false);
+    }
+  }
+  if (typeof window !== "undefined") {
+    window.addEventListener('scroll', changeNavBar);
+  }
   return (
     <>
-      <div className={style.navigation}>
+      <div className={coloractive ? style.navigation__active : style.navigation}>
         <div className={style.navigation__links}>
           <Link className={`${style.navigation__link} ${pathname === '/' ? style.active : style.notActive}`} href='/'>
             Home
