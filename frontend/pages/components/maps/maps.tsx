@@ -4,10 +4,9 @@ import styles from "./maps.module.css";
 type MapProps = {
   center: number[];
   zoom: number;
-  props: any;
 };
 
-export default function Map({center, zoom, ...props}: MapProps) {
+export default function Map({center, zoom}: MapProps) {
   const mapRef = React.useRef(null);
   useEffect(() => {
   if (typeof window !== "undefined") {

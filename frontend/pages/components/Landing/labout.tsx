@@ -10,11 +10,7 @@ export default function AboutSection() {
             About Us
           </h1>
           <p className={styles.container_sections_text}>
-            Kite Institute of Professional studies is not just a place of learning.
-             it's a place of growth, discovery, and personal development. We invite you
-             to join our community of scholars and embrace a future filled with knowledge
-             and opportunity. At Kite Institute of Professional studies, your educational journey
-             is the first step toward a brighter tomorrow.
+            {`Kite Institute of Professional studies is not just a place of learning. it's a place of growth, discovery, and personal development. We invite you to join our community of scholars and embrace a future filled with knowledge and opportunity. At Kite Institute of Professional studies, your educational journey is the first step toward a brighter tomorrow.`}
           </p>
           <div className={styles.container_sections_cards}>
           <Card>
