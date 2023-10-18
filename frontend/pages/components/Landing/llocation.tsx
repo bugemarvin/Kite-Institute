@@ -13,7 +13,7 @@ export default function LocationSection() {
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor architecto voluptatem accusamus assumenda necessitatibus consequatur voluptates ipsam cumque ipsa aperiam maxime incidunt, modi officia iure, aut excepturi iusto atque libero?
           </p>
           <div className={styles.container_sections_map} id="map">
-            <Map center={[51.505, -0.09]} zoom={13} />
+            <Map center={[-1.47296, 36.95898]} zoom={18} />
           </div>
           <div className={styles.container_sections_button}>
               <Link href="/location">Learn More</Link>
